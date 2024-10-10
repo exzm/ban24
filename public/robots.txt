@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /new
+Disallow: /login
+Disallow: /register
+Disallow: /feedback
+Disallow: /password/reset
+Disallow: /firm/qrcode/

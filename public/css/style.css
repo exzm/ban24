@@ -1,0 +1,337 @@
+.site-header {
+    background-color: rgba(51, 52, 52, 0.02);
+}
+
+nav .logo img {
+    height: 50px;
+}
+
+body {
+    position: relative;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    background-image: url("/img/back.png");
+    background-opacity: 0.5;
+}
+
+header {
+    border-bottom: 1px solid #e5e5e5;
+    height: 100px;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+}
+
+.site-header li {
+    cursor: pointer;
+}
+
+.container .content {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    min-height: 50vh;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+}
+
+.font-size-90 {
+    font-size: 90%;
+}
+
+header .logo img {
+    height: 100px;
+}
+
+.breadcrumb {
+    background-color: rgba(0, 0, 0, 0.03);
+    font-size: 0.8rem;
+}
+
+a {
+    color: #4d7284;
+}
+
+.firm-menu {
+    background-color: rgba(0, 0, 0, 0.03);
+    height: 30px;
+}
+
+.firm-menu .border:hover {
+    background-color: rgba(0, 0, 0, 0.14);
+}
+
+.firm-menu .border {
+    padding-top: 4px;
+}
+
+.firm-page .passport h3 {
+    font-size: 0.8rem;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.br-theme-fontawesome-stars .br-widget {
+    height: 28px;
+    white-space: nowrap;
+}
+
+.br-theme-fontawesome-stars .br-widget a {
+    font: normal normal normal 25px/1 "Font Awesome 5 Pro";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    margin-right: 2px;
+}
+
+.br-theme-fontawesome-stars .br-widget a:after {
+    content: '\f005';
+    color: #d2d2d2;
+}
+
+.br-theme-fontawesome-stars .br-widget a.br-active:after {
+    color: #ff3648;
+}
+
+.br-theme-fontawesome-stars .br-widget a.br-selected:after {
+    color: #ff3648;
+}
+
+.br-theme-fontawesome-stars .br-widget .br-current-rating {
+    display: none;
+}
+
+.br-theme-fontawesome-stars .br-readonly a {
+    cursor: default;
+}
+
+.firm-page #map {
+    min-height: 400px;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.firm-page #map img {
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.category-page #map {
+    height: 70px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.category-page #map img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.category-page .show-map {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: rgb(225, 237, 209);
+    height: 25px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+
+.map-init .show-map,
+.map-init img {
+    display: none !important;
+}
+
+.map-init #map {
+    height: 400px;
+    margin-bottom: 10px;
+}
+
+#map {
+    cursor: pointer;
+}
+
+#address {
+    border-bottom: 1px solid grey !important;
+    cursor: pointer;
+    border-style: dotted !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+#address:hover {
+    opacity: 0.5;
+}
+
+ymaps {
+    box-sizing: content-box;
+}
+
+.blink {
+    opacity: 0.5;
+}
+
+.page-link {
+    color: grey;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: rgba(123, 133, 127, 0.7);
+    border-color: grey;
+}
+
+.firm-page .name {
+    color: rgba(250, 80, 58, 0.83);
+}
+
+@media print {
+    .br-theme-fontawesome-stars .br-widget a:after {
+        content: '\f006';
+        color: black;
+    }
+
+    .br-theme-fontawesome-stars .br-widget a.br-active:after,
+    .br-theme-fontawesome-stars .br-widget a.br-selected:after {
+        content: '\f005';
+        color: black;
+    }
+}
+
+@media (max-width: 576px) {
+
+    h1 {
+        font-size: 1rem !important;
+    }
+
+    h2 {
+        font-size: 0.8rem !important;
+    }
+
+    .navbar .logo {
+        padding-left: 20px;
+    }
+
+    .navbar .logo img {
+        height: 37px;
+    }
+
+    .navbar .navbar-toggler {
+        margin-right: 10px;
+    }
+
+    .navbar .navbar-collapse .navbar-nav {
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        margin-left: 10px !important;
+
+    }
+
+    .navbar .navbar-collapse .nav-item {
+        padding: 10px;
+    }
+
+    .firm-list {
+        margin-left: 30px;
+    }
+
+    .footer .description {
+        font-size: 0.5rem;
+    }
+
+    .footer .float-right {
+        float: none !important;
+        text-align: center;
+    }
+
+    .firm-menu {
+        height: auto;
+    }
+
+    .firm-page h1, .firm-page h2 {
+        text-align: center;
+    }
+
+    .breadcrumb {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    .firm-page .passport .d-inline-block {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .firm-page .passport h3 {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .mob-none {
+        display: none;
+    }
+
+    .worktime table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    .firm-page h3 {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .firm-page .bottom-block {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+
+    #reviews {
+        padding: 10px;
+    }
+    .page-link {
+        padding: 3px;
+    }
+    .category-page #filters {
+        margin-bottom: 10px !important;
+    }
+    .category-page #filters,
+    .category-page .map {
+        margin-left: 30px !important;
+    }
+
+    .firm-page .keys-list {
+        padding-left: 10px !important;
+    }
+}
+
+.small,
+small {
+	font-size:100% !important;
+}
+
+.text-muted {
+	color:#323436 !important;
+}
