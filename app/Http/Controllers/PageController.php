@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use TelegramBot\Api\BotApi;
+
 class PageController extends Controller
 {
 
@@ -24,15 +26,22 @@ class PageController extends Controller
         $this->addBread(route('feedback-page'), 'Написать нам');
 
         if (request()->all()) {
-            $this->sendTelegram(request()->all());
+            $data = request()->all();
+
+            if ($this->isSpam($data['text'])) {
+                return back()->withErrors('Сообщение похоже на спам.');
+            }
+
+            $this->sendTelegram($data);
             return back()->with('success', 'Спасибо! Ваше сообщение отправлено');
         }
+
         return view('pages.feedback');
     }
 
     private function sendTelegram($data)
     {
-        $bot = new \TelegramBot\Api\BotApi(self::BOT_TOKEN);
+        $bot = new BotApi(self::BOT_TOKEN);
 
         $message = "
 *Обратная связь*
@@ -41,10 +50,21 @@ class PageController extends Controller
 {$data['name']}
 
 {$data['email']}
-         
+
 [REFERER](" . \Request::server('HTTP_REFERER') . ")";
 
         return $bot->sendMessage(self::CHAT_ID, $message, 'Markdown');
+    }
+
+    private function isSpam($message): bool
+    {
+        $spamWords = ['http', 'www', 'viagra', 'free', 'promo'];
+        foreach ($spamWords as $word) {
+            if (stripos($message, $word) !== false) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
